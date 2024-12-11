@@ -30,13 +30,12 @@ function validateFormData(objek) {
     objek.name !== "" &&
     objek.city !== "" &&
     objek.email !== "" &&
-    objek.zipCode !== "" &&
     isNumber(objek.zipCode) &&
     checkboxIsChecked();
   return valid;
 }
 
-function submit(event) {
+function submit() {
   const formData = handleGetFormData();
   const isValid = validateFormData(formData);
   const warning = document.getElementById("warning");
@@ -45,10 +44,19 @@ function submit(event) {
     warning.textContent = "Periksa form anda sekali lagi";
   } else {
     warning.textContent = "";
+    alert("Pendaftaran Berhasil");
+    console.log(formData);
   }
 }
 
 document.getElementById("submit-form").addEventListener("click", (event) => {
   event.preventDefault();
   submit();
+});
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });

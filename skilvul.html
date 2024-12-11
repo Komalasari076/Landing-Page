@@ -5,82 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="skilvul.css" />
+    <title>Landing Page</title>
   </head>
   <body>
-    <!-- Tambahkan kode kalian di sini -->
     <header>
       <nav>
-        <a id="link" href="https://skilvul.com">skilvul</a>
-        <ul>
+        <div class="logo">
+          <a id="link" href="https://skilvul.com" aria-label="Skilvul Homepage"
+            ><img
+              src="https://skilvul.com/static/skilvul.svg"
+              alt="Logo skilvul"
+          /></a>
+        </div>
+
+        <ul class="nav-links" id="nav-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#details">Details</a></li>
           <li><a href="#register">Daftar</a></li>
         </ul>
+
+        <div class="hamburger" id="hamburger">&#9776;</div>
       </nav>
     </header>
 
     <main>
-      <article>
-        <div class="landing">
-          <div class="deskripsi">
-            <h1>Perempuan sebagai Agen Perubahan untuk Bumi yang Lestari</h1>
-            <p id="description">
-              Workshop khusus bagi perempuan yang ingin menjadi garda terdepan
-              dalam pelestarian lingkungan
-            </p>
-            <button><a href="#register">Daftar Sekarang</a></button>
-          </div>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Perempuan sebagai Agen Perubahan untuk Bumi yang Lestari</h1>
+          <p id="description">
+            Workshop khusus bagi perempuan yang ingin menjadi garda terdepan
+            dalam pelestarian lingkungan
+          </p>
+          <a href="#register"><button>Daftar Sekarang</button></a>
+        </div>
+
+        <div class="hero-image">
           <img
             src="https://id.seedbacklink.com/wp-content/uploads/2023/01/Step-1.png"
             alt="Presenter di depan audiens"
+            width="100%"
           />
         </div>
-      </article>
+      </section>
 
-      <article>
-        <div id="about">
+      <section id="about">
+        <div class="about-image">
           <img
             src="https://id.seedbacklink.com/wp-content/uploads/2023/01/Step-3.png"
+            width="100%"
           />
+        </div>
 
-          <div class="details">
-            <h1>Tentang Workshop</h1>
-            <p>
-              Workshop ini diselenggarakan oleh perempuan inovasi yang
-              berkomitmen untuk memajukan kesadaran dan pemahaman tentang peran
-              perempuan dalam menjaga kelestarian alam. Dalam Event ini, peserta
-              akan belajar tentang:
-            </p>
+        <div class="about-details">
+          <h1>Tentang Workshop</h1>
+          <p>
+            Workshop ini diselenggarakan oleh perempuan inovasi yang berkomitmen
+            untuk memajukan kesadaran dan pemahaman tentang peran perempuan
+            dalam menjaga kelestarian alam. Dalam Event ini, peserta akan
+            belajar tentang:
+          </p>
 
-            <ol>
-              <li>Perempuan sebagai Agen Perubahan dalam Pelestarian Alam</li>
+          <ol>
+            <li>
+              Perempuan sebagai Agen Perubahan dalam Pelestarian Alam
               <ul>
                 <li>Pendidikan dan Kesadaran Lingkungan</li>
                 <li>Pengelolaan Sumber Daya Alam</li>
               </ul>
-              <li>Cara mengolah limbah sampah yang efektif</li>
+            </li>
+            <li>
+              Cara Mengolah Limbah Sampah yang Efektif
               <ul>
-                <li>pilah sampah organik dan anorganik</li>
-                <li>pengomposan sampah organik</li>
+                <li>Pilah sampah organik dan anorganik</li>
+                <li>Pengomposan sampah organik</li>
                 <li>Daur ulang sampah anorganik</li>
               </ul>
-              <li>Memanfaatkan teknologi untuk sistem pengelolaan sampah</li>
+            </li>
+            <li>
+              Memanfaatkan Teknologi untuk Sistem Pengelolaan Sampah
               <ul>
                 <li>Pengenalan aplikasi pengelolaan sampah</li>
                 <li>Program pendidikan digital tentang pengelolaan sampah</li>
               </ul>
-            </ol>
-          </div>
+            </li>
+          </ol>
         </div>
-      </article>
+      </section>
 
-      <article>
-        <div class="time" id="details">
-          <div class="jadwal">
-            <h1>Detail Acara</h1>
-            <!--buat jadi sebuah table-->
-            <p><strong>Tanggal:</strong> 25 Juni 2024</p>
-            <p><strong>Waktu:</strong> 09:00 - 12:00 WIB</p>
+      <section id="details">
+        <div class="details-text">
+          <h1>Detail Acara</h1>
+
+          <ol>
+            <li><strong>Tanggal:</strong> 25 Juni 2024</li>
+            <li><strong>Waktu:</strong> 09:00 - 12:00 WIB</li>
             <ul>
               <li>07.00-08.00 Chek-in peserta</li>
               <li>08.00-08.30 Pembukaan</li>
@@ -101,43 +119,79 @@
               </li>
               <li>14.30-15.00 Penutupan</li>
             </ul>
-            <p>
+            <li>
               <strong>Lokasi:</strong> Aula Gedung Serbaguna, Jalan Merdeka No.
               123, Jakarta
-            </p>
-            <p><strong>Biaya:</strong> Gratis</p>
-          </div>
+            </li>
+            <li><strong>Biaya:</strong> Gratis</li>
+          </ol>
+        </div>
+
+        <div class="details-image">
           <img
             src="https://id.seedbacklink.com/wp-content/uploads/2023/01/Step-2.png"
+            width="100%"
           />
         </div>
-      </article>
+      </section>
 
-      <div class="daftar" id="register">
-        <h1>Daftar Sekarang</h1>
+      <section id="register">
         <form id="form">
+          <h1>Daftar Sekarang</h1>
           <label for="name">Name :</label>
-          <input id="name" type="text" placeholder="Nama" />
+          <input id="name" type="text" placeholder="Nama" required />
 
           <label for="city">City :</label>
-          <input id="city" type="text" placeholder="Kota" />
+          <input id="city" type="text" placeholder="Kota" required />
 
           <label for="email">Email :</label>
-          <input id="email" type="email" placeholder="Email" />
+          <input id="email" type="email" placeholder="Email" required />
 
           <label for="zip-code">Zip Code :</label>
-          <input id="zip-code" type="number" placeholder="Kode Pos" />
+          <input id="zip-code" type="number" placeholder="Kode Pos" required />
 
-          <label id="check"
-            >Dengan ini saya menyatakan data yang diisi pada form ini adalah
-            benar dan telah sesuai</label
-          >
-          <input id="status" type="checkbox" />
+          <div class="check">
+            <input id="status" type="checkbox" required />
+            <label id="check">
+              Dengan ini saya menyatakan data yang diisi pada form ini adalah
+              benar dan telah sesuai
+            </label>
+          </div>
 
           <button id="submit-form" type="submit">Submit</button>
           <div id="warning"></div>
         </form>
-      </div>
+
+        <div class="instruksi">
+          <h2>Cara Pendaftaran</h2>
+          <p>
+            Ikuti langkah-langkah berikut untuk mendaftar dan menjadi bagian
+            dari acara istimewa ini:
+          </p>
+          <ol>
+            <li>
+              Isi semua kolom pada formulir pendaftaran dengan informasi yang
+              benar.
+            </li>
+            <li>
+              Pastikan untuk mencentang kotak pernyataan bahwa data yang Anda
+              isi adalah benar.
+            </li>
+            <li>
+              Klik tombol <strong>Submit</strong> untuk mengirimkan formulir.
+            </li>
+            <li>
+              Anda akan menerima email konfirmasi setelah pendaftaran berhasil.
+            </li>
+          </ol>
+          <p>
+            Jangan lewatkan kesempatan ini untuk belajar dan berbagi pengalaman
+            dengan perempuan lainnya yang peduli terhadap pelestarian
+            lingkungan. Sampai jumpa di acara workshop kami! Mari bersama
+            menjadi agen perubahan untuk bumi yang lebih lestari.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>

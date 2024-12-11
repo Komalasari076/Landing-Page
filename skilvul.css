@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  letter-spacing: 0.5px;
 }
 
 body {
@@ -9,64 +10,86 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*! header */
 header {
   background: rgb(250, 117, 9);
-  padding: 20px 40px;
+  padding: 16px 0;
 }
 
-header li {
+header nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .logo img {
+  width: 100px;
+}
+
+header nav .nav-links li {
   display: inline;
-  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 18px;
 }
 
-header a {
+header nav .nav-links li a {
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
 }
 
-#link {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  padding: 8px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 10px 20px 30px 40px;
-  background-color: #fff;
-  color: rgb(250, 117, 9);
+.nav-links li a:hover {
+  text-shadow: 0 0 10px white;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  transition: all 0.5s ease-in;
+}
+
+/* !main */
 main {
-  padding: 0 50px;
+  width: 80%;
+  margin: auto;
 }
 
-article {
+/* Hero Section */
+.hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* pertama */
-.landing {
-  display: flex;
-  gap: 20px;
+  justify-content: space-between;
   align-items: center;
   min-height: 600px;
 }
 
-.deskripsi h1 {
-  margin-bottom: 40px;
-  font-size: 36px;
+.hero-text {
+  width: 50%;
 }
 
-.deskripsi p {
-  margin-bottom: 40px;
+.hero-image {
+  width: 50%;
+}
+
+.hero-text h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
   font-size: 18px;
   font-weight: 300;
 }
 
-.deskripsi button {
+.hero-text button {
   font-size: 18px;
   padding: 10px;
   background-color: rgb(250, 97, 9);
@@ -75,74 +98,112 @@ article {
   border-color: rgb(250, 117, 9);
 }
 
-.deskripsi button a {
+.hero-text button:hover {
+  background-color: rgb(209, 88, 18);
+}
+
+.hero-text button a {
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
 }
 
-/* kedua */
+/* About Section */
 #about {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
   align-items: center;
-  min-height: 500px;
+  padding-bottom: 50px;
+}
+
+.about-image {
+  width: 40%;
+}
+
+.about-details {
+  width: 50%;
   font-weight: 300;
 }
 
-.details h1 {
-  text-align: center;
+.about-details h1 {
   margin-bottom: 20px;
 }
 
-.details ol {
-  margin: 30px;
+.about-details ol {
+  margin: 20px;
 }
 
-.details ul {
+.about-details ol li {
+  font-weight: 500;
+}
+
+.about-details ul {
   margin-bottom: 10px;
 }
 
-/* ketiga */
-.time {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  min-height: 600px;
+.about-details ul li {
   font-weight: 300;
 }
 
-.jadwal p {
-  margin: 15px 0;
+/* Details Section */
+#details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  font-weight: 300;
 }
 
-.jadwal ul {
+.details-image {
+  width: 50%;
+}
+
+.details-text {
+  width: 50%;
+}
+
+.details-text ol {
+  list-style-type: none;
+}
+
+.details-text ul {
   margin: 20px;
 }
 
-.jadwal li {
+.details-text li {
   margin: 5px 0;
 }
 
-.daftar {
-  width: 350px;
+/* Form Pendaftaran */
+#register {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 50px 0;
   margin: auto;
-  margin-bottom: 80px;
-  padding: 30px;
-  background-color: rgb(250, 97, 9);
-  color: #fff;
-  border-radius: 30px;
-}
-
-.daftar h1 {
-  text-align: center;
-  font-size: 24px;
-  margin: 20px;
 }
 
 form {
-  display: grid;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 97, 9);
+  padding: 30px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+form h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 14px;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 form input {
@@ -153,9 +214,17 @@ form input {
   padding: 5px;
 }
 
-input::placeholder {
-  color: #888;
+form input::placeholder {
+  color: #a1a1a1;
   font-size: 14px;
+}
+
+form .check {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 form button {
@@ -169,50 +238,215 @@ form button {
   font-size: 18px;
 }
 
-#warning {
-  color: rgb(153, 9, 9);
-  text-align: center;
-  padding: 10px;
+form button:hover {
+  background-color: rgb(253, 233, 221);
+  border: 2px solid rgb(253, 233, 221);
 }
 
+form button:active {
+  transform: scale(0.96);
+  transition: 0.1s;
+}
+
+form #warning {
+  color: rgb(153, 9, 9);
+  font-weight: 500;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.instruksi {
+  width: 45%;
+}
+
+.instruksi p {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.instruksi ol {
+  margin: 20px;
+  font-weight: 400;
+}
+
+.instruksi ol li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
 footer {
   width: 100%;
   background-color: rgb(250, 97, 9);
   color: white;
-  padding: 10px 0;
+  padding: 16px 0;
 }
 
 footer p {
   text-align: center;
   font-size: 16px;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-  .landing {
+  .hero {
+    display: flex;
     flex-direction: column-reverse;
     text-align: center;
-    margin-top: 20px;
+    padding: 50px 0;
+    min-height: fit-content;
   }
 
-  .landing h1 {
-    font-size: 30px;
+  .hero-image {
+    width: 90%;
   }
 
-  #about {
-    flex-direction: column;
-    margin-top: 100px;
-  }
-
-  .time {
-    flex-direction: column-reverse;
-    margin: 50px 10px 70px 10px;
-  }
-
-  img {
+  .hero-text {
     width: 100%;
   }
 
-  .daftar {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    padding: 50px 0;
+  }
+
+  .about-image {
     width: 80%;
+  }
+
+  .about-details {
+    width: 100%;
+  }
+
+  #details {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .details-image {
+    width: 90%;
+  }
+
+  .details-text {
+    width: 100%;
+  }
+
+  #register {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    padding: 50px 0;
+  }
+
+  form {
+    width: 50%;
+    margin: auto;
+  }
+
+  .instruksi {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 40px 0;
+  }
+
+  .about-image {
+    width: 90%;
+  }
+
+  .about-details {
+    width: 100%;
+  }
+
+  #details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
+  }
+
+  .details-image {
+    width: 100%;
+  }
+
+  .details-text {
+    width: 100%;
+  }
+
+  #register {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    padding: 40px 0;
+  }
+
+  form {
+    width: 80%;
+    margin: auto;
+  }
+
+  .instruksi {
+    width: 100%;
+  }
+
+  /* hamburger menu */
+  header nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    border-radius: 5px;
+    background-color: rgba(250, 97, 9, 0.8);
+  }
+
+  header nav .nav-links li {
+    margin-left: 0;
+    font-size: 16px;
+    padding: 6px 20px;
+    margin: 2px 0;
+  }
+
+  header nav .nav-links li:hover {
+    text-shadow: 0 0 10px white;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
