@@ -36,7 +36,7 @@ header nav .nav-links li {
 }
 
 header nav .nav-links li a {
-  color: #fff;
+  color: #202020;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
@@ -99,7 +99,7 @@ main {
 }
 
 .hero-text button:hover {
-  background-color: rgb(209, 88, 18);
+  background-color: rgb(233, 85, 0);
 }
 
 .hero-text button a {
@@ -222,9 +222,14 @@ form input::placeholder {
 form .check {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+form .check input {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 form button {
@@ -236,11 +241,6 @@ form button {
   background-color: white;
   font-weight: bold;
   font-size: 18px;
-}
-
-form button:hover {
-  background-color: rgb(253, 233, 221);
-  border: 2px solid rgb(253, 233, 221);
 }
 
 form button:active {
@@ -288,6 +288,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  header nav .nav-links li {
+    margin-left: 20px;
+  }
+
   .hero {
     display: flex;
     flex-direction: column-reverse;
@@ -425,10 +429,11 @@ footer p {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 40px;
+    top: 50px;
+    right: 35px;
     border-radius: 5px;
     background-color: rgba(250, 97, 9, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   header nav .nav-links li {
